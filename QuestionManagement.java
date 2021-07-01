@@ -31,11 +31,7 @@ public class QuestionManagement {
             System.out.println("you chose level which don't have in system,please ");
         }
         return qual;
-        private boolean answercorrect(String answer){
-            if ( answercorrect == true){
-                System.out.println("correct");
-            else 
-                 System.out.println("incorrect");
+        
     }
 }
 
