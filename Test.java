@@ -36,7 +36,7 @@ public class Test {
             questions[i].setAnswerD(answerD);
         }
         System.out.println();
-    QuestionManagement questionManagement = new QuestionManagement(questions);
+        QuestionManagement questionManagement = new QuestionManagement(questions);
         System.out.println(" enter level you want: ");
         int qual = scanner.nextInt();
         questionManagement.check(qual);
@@ -62,7 +62,7 @@ public class Test {
     }
     public static void main (String[] args){
        Test check = new Test();
-
+        
     }
 
 }
