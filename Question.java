@@ -79,6 +79,14 @@ public class Question {
     public void setLevel(int level) {
         this.level = level;
     }
+    public boolean answercorrect(boolean test){
+        if (test == true){
+            System.out.println("correct");        
+    }   else{
+            System.out.println("incorrect"); 
+    }
+        return test;
+    }
 }
 
 
