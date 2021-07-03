@@ -31,7 +31,22 @@ public class QuestionManagement {
             System.out.println("you chose level which don't have in system,please ");
         }
         return qual;
-        
+    }
+    public int mark(String answer,int qual){
+        String[] answer = answer.split(" ");
+        int index=0;
+        int score=0;
+        for (int i=0;i<questions.length;i++) {
+            if (qual == questions[i].getLevel()) {
+                 String comment= answer[index];
+                 boolean check =question[i].answercorrect(comment);
+                if (check == true) {
+                    mark ++;
+                } 
+                index++;
+            }
+    }
+        return mark;
     }
 }
 
