@@ -42,7 +42,7 @@ public class Test {
         questionManagement.check(qual);
         System.out.println();
         System.out.println("enter answer: ");
-        String answer = scanner.nextLine();
+        String[] answer = answer.split(" ");
         int j=0,k=0;
         for (int i=0;i<questions.length;i++) {
             if (qual == questions[i].getLevel()) {
