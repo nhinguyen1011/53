@@ -46,23 +46,22 @@ public class Test {
         int j=0,k=0;
         for (int i=0;i<questions.length;i++) {
             if (qual == questions[i].getLevel()) {
+                j++;
                 System.out.println("question " + (i + 1) + ":");
                 char a = answer.charAt(i);
                 System.out.println("answer: " + a);
                 char out = questions[i].getCorrect().charAt(i);
                 if (a == out) {
-
+                    questions[i].answercorrect(true);
                     k++;
                 } else
+                    questions[i].answercorrect(false);
                     System.out.println(" answer" + questions[i].getCorrect());
             }
-            System.out.println(questionManagement.score(k, i));
-        }
 
     }
-    public static void main (String[] args){
-       Test check = new Test();
-        
+   System.out.println();
+   System.out.println(questionManagement.score(k, i)); 
     }
 
 }
