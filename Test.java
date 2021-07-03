@@ -39,29 +39,15 @@ public class Test {
         QuestionManagement questionManagement = new QuestionManagement(questions);
         System.out.println(" enter level you want: ");
         int qual = scanner.nextInt();
+        scanner.nextLine();
+        int total=questionManagement.check(qual);
         questionManagement.check(qual);
         System.out.println();
         System.out.println("enter answer: ");
-        String[] answer = answer.split(" ");
-        int j=0,k=0;
-        for (int i=0;i<questions.length;i++) {
-            if (qual == questions[i].getLevel()) {
-                j++;
-                System.out.println("question " + (i + 1) + ":");
-                char a = answer.charAt(i);
-                System.out.println("answer: " + a);
-                char out = questions[i].getCorrect().charAt(i);
-                if (a == out) {
-                    questions[i].answercorrect(true);
-                    k++;
-                } else
-                    questions[i].answercorrect(false);
-                    System.out.println(" answer" + questions[i].getCorrect());
-            }
-
-    }
-   System.out.println();
-   System.out.println(questionManagement.score(k, i)); 
-    }
+        String answer = scanner.nextLine();
+        int score =questionManagement.mark(answer, qual);
+        System.out.println();
+        System.out.println(questionManagement.score(score, total)); 
+        }
 
 }
